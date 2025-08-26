@@ -1,0 +1,1175 @@
+
+      /* General CSS */
+           @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
+           @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+           *,
+           *::before,
+           *::after {
+               -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+               text-decoration: none;
+               outline: none;
+           }
+
+           :root {
+
+               /* Background Color */
+               --bg-white: #fff;
+
+               /* Text Colors */
+               --primary-text: #061738;
+               --secondary-color: #60cd12;
+               --light-color: #e2f6de;
+               --dark-color: #03262c;
+               --text-white: #fff;
+               --text-gray: #dee2e6;
+               --anchor-color: #007aff;
+
+               /* Font Family */
+               --primary-font: 'Barlow Condensed', sans-serif;
+               --secondary-font: 'Roboto', sans-serif;
+           }
+           
+           body,
+           html {
+               color: var(--primary-text);
+               font-size: 10px;
+               font-weight: 400;
+               font-family: var(--primary-font);
+               scroll-behavior: smooth;
+               line-height: 1.5;
+               background-image: url(./img/bg.jpg);
+           }
+
+           h1,
+           h2,
+           h3,
+           h4,
+           h5,
+           h6,
+           p {
+               margin: 0;
+           }
+
+           h1 {
+               font-size: 9rem;
+               line-height: 1.4;
+               font-weight: 600;
+               color: var(--primary-text);
+           }
+
+           h2 {
+               color: var(--primary-text);
+               font-size: 4.7rem;
+               font-weight: 600;
+               display: inline-block;
+               text-transform: capitalize;
+               line-height: 1.2;
+               margin-bottom: 2rem;
+           }
+
+           h3 {
+               color: var(--text-white);
+               font-size: 3.1rem;
+               line-height: 1.2;
+               font-weight: 700;
+           }
+
+           h4 {
+               font-size: 2.5rem;
+               font-weight: 700;
+               line-height: 1;
+               color: var(--primary-text);
+           }
+
+           h5 {
+               font-size: 1.8rem;
+               font-weight: 600;
+               line-height: 1;
+               color: var(--primary-text);
+           }
+
+           p {
+               font-size: 1.6rem;
+               line-height: 1.6;
+               margin-top: 1rem;
+               color: var(--primary-text);
+               font-family: var(--secondary-font);
+           }
+
+           embed,
+           iframe,
+           img,
+           object {
+               max-width: 100%;
+           }
+
+           ul {
+               margin: 0;
+               padding: 0;
+               list-style: none;
+           }
+
+           a,
+           a:active,
+           a:focus,
+           a:hover,
+           button {
+               text-decoration: none;
+               outline: 0;
+           }
+
+           li a {
+               color: var(--text-white);
+           }
+
+           a:hover,
+           button:hover {
+               -webkit-transition: all 0.3s ease-in;
+               -o-transition: all 0.3s ease-in;
+               -moz-transition: all 0.3s ease-in;
+               transition: all 0.3s ease-in;
+           }
+
+           ::-webkit-scrollbar {
+               width: 10px;
+               border-radius: 30px;
+           }
+
+           ::-webkit-scrollbar-track {
+               background: var(--white);
+           }
+
+           ::-webkit-scrollbar-thumb {
+               background: var(--secondary-color);
+               border-radius: 30px;
+           }
+
+           .main-btn {
+               position: relative;
+               color: var(--bg-white);
+               background: linear-gradient(to right, #0f7404, #5cb917);
+               z-index: 1;
+               overflow: hidden;
+               border: 0.3rem solid var(--bg-white);
+               border-radius: 3.5rem;
+               text-transform: uppercase;
+               padding: 1rem 3.5rem;
+               font-weight: 800;
+               font-size: 1.8rem;
+               margin-top: 1.5rem;
+               letter-spacing: 0.2rem;
+           }
+
+           .main-btn:hover {
+            background: linear-gradient(110.1deg, rgb(34, 126, 34) 2.9%, rgb(168, 251, 60) 90.3%);
+            border: 0.2rem solid var(--secondary-color);
+           }
+
+           section {
+               padding: 5rem 0;
+           }
+
+           .section-title {
+               font-size: 4rem;
+               font-weight: 600;
+               color: var(--primary-text);
+               text-transform: capitalize;
+               margin-bottom: 2rem;
+           }
+
+           .section-subtitle {
+               font-size: 1.6rem;
+               font-weight: 400;
+               color: var(--primary-text);
+               font-family: var(--secondary-font);
+               max-width: 40%;
+               margin: auto;
+               margin-bottom: 1.5rem;
+           }
+.blog .banner_section
+           .about .banner_section,
+           .product .banner_section,
+           .gallery .banner_section,
+           .distributors .banner_section {
+               background: url('./img/banner-small.png');
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+               padding-top: 17rem;
+               padding-bottom: 10rem;
+               min-height: auto;
+               height: 500px;
+           }
+/* Header Styles */
+.header {
+    position: fixed; /* Change to fixed for sticky behavior */
+    width: 100%;
+    top: 0; /* Aligns the header at the top */
+    left: 0;
+    z-index: 1000; /* Higher than other content to stay on top */
+    transition: top 0.3s ease-in-out; /* Smooth transition for the sticky effect */
+}
+
+/* Background styling */
+.header .navbar {
+    background: url('./img/header-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Adjust to cover if needed */
+    padding: 2rem 5rem;
+}
+
+/* Other Styles */
+.header .navbar-brand {
+    width: 14rem;
+    margin-top: -0.1rem;
+}
+
+/* General Navbar Link Styles */
+.header .navbar-nav .nav-link {
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0 1.5rem;
+    font-family: var(--primary-font);
+    position: relative;
+}
+
+/* Hover Effect for Navbar Links */
+.header .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.2rem;
+    height: 0.3rem;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+.header .navbar-nav .nav-link:hover::after,
+.header .navbar-nav .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Hover Effect for "Shop" Link */
+.navbar-nav .nav-item.dropdown:hover > .nav-link::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Hover Effect for Navbar Links */
+.header .navbar-nav .nav-link:hover,
+.header .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.header .navbar-toggler {
+    color: var(--text-white);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.header .header-right ul img {
+    width: 2rem;
+}
+
+.header .header_right span {
+    color: var(--secondary-color);
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.header .header_right a {
+    height: 3.5rem;
+    width: 3.5rem;
+    text-align: center;
+    background-color: #13424a;
+    border-radius: 50%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-scrolled {
+    position: fixed;
+    top: 0; /* Align to the top */
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+/* Remove the arrow beside "Shop" */
+.navbar-nav .nav-item.dropdown .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.2rem;
+    height: 0.3rem;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+/* Style the Dropdown Menu */
+.navbar-nav .dropdown-menu {
+    background-color: var(--dark-color);
+    border: none;
+    border-radius: 5px;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Dropdown Menu Item Styles */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    position: relative;
+}
+
+/* Hover Effect for Dropdown Items */
+.navbar-nav .dropdown-menu .dropdown-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.2rem;
+    height: 0.5rem;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover::after,
+.navbar-nav .dropdown-menu .dropdown-item.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Make the Dropdown Appear on Hover */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    right: auto;
+}
+
+
+
+        
+
+     
+           /* 02 Banner Section */
+
+           .banner_section {
+               background: url('./img/banners/1.jpg');
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-position: center;
+               min-height: 90vh;
+               margin-bottom: 50px;
+           }
+
+           .banner_section .carousel-item {
+               padding: 3rem 0;
+               height: 90vh;
+               
+           }
+
+           .banner_section .carousel-caption {
+               top: 29%;
+               bottom: 0;
+               left: 5%;
+               right: 0%;
+               text-align: left;
+               max-width: 90%;
+               /* Adjust max-width for better control */
+           }
+         
+           .banner_section .carousel-caption h1 {
+            font-size: 8rem;
+            margin-bottom: 2rem; /* Adds space below the heading */
+        }
+        
+        .banner_section .carousel-caption h3 {
+            padding: 0.5rem 1.5rem;
+            background-color: var(--dark-color);
+            border-radius: 10px;
+            display: inline;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem; /* Adds space below the subheading */
+        }
+        
+        .banner_section .carousel-caption p {
+            max-width: 40rem;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem; /* Adds space below the paragraph */
+            font-size: 1.6rem;
+        }
+        
+        .banner_section .carousel-caption .main-btn {
+            padding: 1rem 3.5rem;
+            border-radius: 3.5rem;
+            margin-bottom: 0; /* Ensures no additional space below the button */
+            margin-top: 2rem; /* Adds space above the button */
+        }
+        
+
+           .banner_section .carousel-caption .main-btn {
+               /* Adjust margin to control spacing */
+               padding: 2rem 3.5rem;
+               /* Ensure padding matches other buttons */
+               border-radius: 3.5rem;
+               font-weight: 600;
+               color: white;
+               font-size: 20px;
+           }
+           
+           .banner_section .carousel-caption .main-btn:hover{
+            color: #061738;
+           }
+
+
+           
+
+
+           /*cards*/
+           /* Card Styles */
+.card {
+    margin-bottom: 50px;
+    background-color: var(--primary-bg-color); /* Use your primary background color */
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container .card {
+border-radius: 15px;
+background: var(--dark-color);
+}
+/* Card Image */
+.card-img-top, .card-img-bottom {
+    border-radius: 15px;
+    transition: transform 1s ease-in-out;
+}
+
+
+
+
+/* Card Body */
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Card Title */
+.card-title {
+    color: var(--dark-color); /* Use your text color */
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: Transform 1s ease-in-out;
+
+}
+
+/* Card Text */
+.card-text {
+    color: var(--bg-white); /* Use your secondary color */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Card Timestamp */
+.card-text small {
+    color: var(--text-muted); /* Use a muted text color */
+}
+
+/* Hover effect on the whole card */
+.card:hover .card-title,
+.card:hover small {
+    color: var(--text-white); /* Change text color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Features Section */
+.feature_section {
+    padding: 3rem 0;
+}
+
+/* Features Box */
+.features-box {
+    background-color: var(--primary-bg-color); /* Primary background color for the card */
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Initial subtle shadow */
+    padding: 2rem; /* Padding inside the card */
+    opacity: 0;
+    transform: translateY(70px); /* Start 70px below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-out; /* Smooth transition including shadow */
+}
+
+/* Features Icon Border */
+.features-icon-border {
+    border: 3px solid var(--secondary-color); /* border*/
+    border-radius: 50%;
+    padding: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Features Icon */
+.features-icon img {
+    width: 50px; /* Adjust the size of the icons */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+/* Features Text */
+.features-text h3 {
+    color: var(--text-white); /* Text color for feature titles */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover Effects for the Features Cards */
+.features-box:hover {
+    transform: translateY(-40px); /* Lift the card on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+/* Hover Effects for the Features Icon Images */
+.features-icon img:hover {
+    filter: brightness(1.3); /* Increase brightness on icon hover */
+    transform: scale(1.2); /* Slight zoom effect on icon hover */
+}
+
+/* Slide-Up Animation */
+.features-box.slide-up {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Ensure hover effect is applied even if slide-up animation is active */
+.features-box {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, opacity 0.6s ease-out; /* Ensure smooth transition */
+}
+
+.features-box.slide-up:hover {
+    transform: translateY(-10px) !important; /* Lift the card on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3) !important; /* Increase shadow on hover */
+}
+
+
+
+/* About Section */
+/* About Section */
+.landing_about_section {
+    margin-bottom: 50px;
+    background: url('./img/why-choose-us/3.png') no-repeat center center/cover;
+    padding: 9rem 0;
+}
+
+.landing_about_section .section-title {
+    font-size: 3rem; /* Increased size */
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: 10px; /* Move heading to the right */
+}
+
+.landing_about_section .section-subtitle {
+    font-size: 1.5rem; /* Increased size */
+    font-weight: 600;
+    color: var(--secondary-text); /* Adjust color as needed */
+    margin-bottom: 2rem;
+    position: relative;
+    left: 10px; /* Move subtitle to the right */
+}
+
+.landing_about_section p {
+    color: var(--primary-text);
+    margin-bottom: 1.5rem;
+}
+
+.landing_about_section .main-btn {
+    margin-left: 30px;
+    background-color: var(--btn-bg); /* Adjust button background color */
+    color: var(--btn-text); /* Adjust button text color */
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 2rem; /* Adjust font size as needed */
+    border-radius: 30px; /* Adjust border-radius as needed */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.landing_about_section .main-btn:hover {
+    background-color: var(--btn-bg-hover); /* Adjust hover background color */
+    transform: scale(1.05);
+}
+
+
+
+/* Blogs section css */
+/* General Styles */
+.container-blog {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsive layout */
+    gap: 20px; /* Spacing between cards */
+    padding: 10px; /* Added padding around the container */
+    justify-content: space-between;
+}
+
+.blog-card {
+    width: calc(25% - 20px); /* 4 cards per row, accounting for the gap */
+    height: 400px;
+    padding: 20px;
+    color: white;
+    background: var(--dark-color);
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transform-origin: center center;
+    transition: all 0.4s ease; /* Smoothed transition */
+    border-radius: 12px;
+    position: relative; /* For positioning the image as background */
+    overflow: hidden; /* Hide overflow to keep the image contained */
+}
+
+.blog-card .blog-content {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px; /* Increased radius for smoother corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the bottom */
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: left; /* Align text to the left */
+}
+
+.blog-card .blog-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.blog-card .blog-title {
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 10px; /* Adjusted margin */
+    color: var(--light-color);
+    font-weight: bold; /* Added font weight for emphasis */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.blog-card .blog-heading {
+    color: #fff;
+    font-size: 1.8rem; /* Adjusted font size */
+    font-weight: 700; /* Increased font weight */
+    line-height: 1.4; /* Increased line height for readability */
+    margin-bottom: 15px; /* Adjusted margin */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.blog-card .blog-author {
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: 400;
+    color: var(--secondary-color);
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.blog-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    z-index: -1; /* Place the background behind content */
+}
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Centers the text horizontally */
+    font-size: 3rem; /* Adjusts the font size */
+    font-weight: 700; /* Makes the text bold */
+    margin: 20px 0 60px; /* Adds margin above and below the heading */
+    color: #03262c; /* Sets the text color to match your theme */
+}
+
+/* Hover Effect */
+.blog-card:hover {
+    transform: scale(1.03); /* Slight scale effect */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    background-color: var(--dark-color); /* Maintain background color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .blog-card {
+        width: calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .blog-card {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-card {
+        width: 100%; /* 1 card per row on extra small screens */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 15px;
+    }
+
+    .blog-card .blog-content {
+        height: 250px; /* Adjusted height for smaller screens */
+    }
+
+    .blog-card .blog-title {
+        font-size: 1.3rem; /* Adjust font size for smaller screens */
+    }
+
+    .blog-card .blog-heading {
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* From Uiverse.io by Lakshay-art */ 
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+    /* --background: #22d3ee; */
+    position: relative;
+    background: var(--background);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 17px;
+    left: 50%;
+    padding: 0.7em 1.8em;
+    margin-bottom: -100px;
+  }
+  
+  .bg {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    z-index: -2;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 180px;
+    height: 100px;
+    transform: translateX(-50%);
+    padding: 0.5em 1em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    background: url("data:image/jpeg;base64,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");
+    border-radius: 30px;
+    background-size: cover;
+    box-shadow: inset 0px 8px 9px #182218, 5px 8px 0px #314328;
+    filter: drop-shadow(60px 60px 6px #18221888);
+    border: 10px solid #3f5641ee;
+    z-index: -1;
+    animation: float 2s infinite;
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    bottom: -22px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    background: #e9f6f4;
+    border: 10px solid #3f5641ee;
+    border-left: none;
+    border-top: none;
+    border-radius: 5px;
+    box-shadow: 10px 4px 0px #314328;
+  }
+  
+  .tooltip-container:hover .tooltip {
+    top: -120px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+  
+  .leaf1 {
+    top: -30px;
+    left: -60px;
+  }
+  .leaf2 {
+    top: -30px;
+    left: -60px;
+  }
+  .leaf3 {
+    top: -30px;
+    left: -60px;
+  }
+  .leaf4 {
+    top: -30px;
+    left: -60px;
+  }
+  .tooltip-container:hover .leaf1 {
+    rotate: z 20deg;
+  }
+  /* .tooltip-container:hover .leaf2{
+  rotate: z 20deg;
+  } */
+  .tooltip-container:hover .leaf3 {
+    rotate: z -20deg;
+  }
+  .tooltip-container:hover .leaf4 {
+    rotate: z 40deg;
+  }
+  
+  .leaf {
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    transform-origin: 100% 100%;
+    transition: rotate 0.5s 0.2s linear;
+    /* border: px solid #314328; */
+    border-radius: 0 100%;
+    background-image: linear-gradient(to right, #b4c7b3, #314328);
+  }
+  .icon {
+    /* box-shadow: 60px 60px 6px #18221888,120px 60px 6px #18221888; */
+    transform: translateX(-50%);
+    filter: drop-shadow(60px 60px 6px #18221888);
+  }
+  .text {
+    z-index: 2;
+    font-size: 22px;
+    color: #3f5641;
+    font-weight: bolder;
+    margin: auto;
+    width: fit-content;
+    padding-top: 25px;
+    filter: drop-shadow(0px 0px 3px #fff);
+  }
+  @keyframes float {
+    
+    0% {
+      top: -120px;
+    }
+    50% {
+      top: -125px;
+    }
+    100% {
+      top: -120px;
+    }
+  }
+  
+
+  
+/* 4.5 Testimonial */
+.testimonial_section {
+    margin-top: 100px;
+    padding-bottom: 8rem;
+}
+
+.testimonial_section .carousel-indicators {
+    bottom: -6rem;
+}
+
+.testimonial_section .carousel-indicators button {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+
+}
+
+.testimonial_section .card {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: right;
+    padding: 5rem 5rem 5rem 0;
+    border-radius: 0 .5rem .5rem 0;
+    border: 0.1rem solid transparent;
+}
+
+.testimonial_section .profile-box {
+    height: 328px;
+    padding: 1.875rem;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.testimonial_section .profile-box img {
+    border-radius: .625rem 3.125rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial_section .desc-box {
+    padding-left: 2.5rem;
+}
+/*testimonil-section end*/
+
+
+.books-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for responsive design */
+    gap: 220px; /* Increased space between the cards */
+    padding: 20px;
+}
+
+.book-card {
+    position: relative;
+    border-radius: 15px; /* Slightly increased border-radius */
+    width: 200px; /* Increased width */
+    height: 300px; /* Increased height */
+    background-image: radial-gradient(circle at center center, rgb(71, 71, 71),rgb(8, 8, 8));    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    transform: preserve-3d;
+    perspective: 800px; /* Increased perspective for a more pronounced 3D effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #03262c;
+    transition-duration: 0.5s;
+}
+
+.cover-card,
+.inner-card {
+    top: 0;
+    position: absolute;
+    background-image: radial-gradient(circle at center center, rgb(71, 71, 71),rgb(8, 8, 8));    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-origin: 0;
+    box-shadow: 2px 2px 15px rgba(15, 16, 15, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-card:hover .cover-card {
+    transition: all 0.5s;
+    transform: rotateY(-70deg);
+}
+
+.inner-card {
+    transform-origin: 100%;
+    background: linear-gradient(145deg, crimson, #b2103a); /* Gradient background */
+}
+
+.book-card:hover .inner-card {
+    transition: all 0.5s;
+    transform: rotateZ(25deg) rotateX(0deg) rotateY(-10deg) translateX(140px);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.book-card:hover {
+    transform: rotateZ(-10deg);
+}
+
+.content {
+    font-size: 20px; /* Increased font size */
+    font-weight: 500; /* Slightly bolder font weight */
+    color: white; /* White text color for better contrast */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-card {
+        width: 180px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-card {
+        width: 160px;
+        height: 240px;
+    }
+}
+
+
+
+/* Footer CSS */
+
+.footer_wrapper {
+    background: url('./img/footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 15rem;
+}
+
+.footer_wrapper h5 {
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer_wrapper ul li {
+    margin-bottom: .5rem;
+    list-style: none;
+}
+
+.footer_wrapper .company_details {
+    font-size: 1.4rem;
+}
+
+.footer_wrapper .contact-info li a {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+}
+
+.footer_wrapper .link-widget li a,
+.footer_wrapper p {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.footer_wrapper .link-widget li a::before {
+    content: '\f105';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footer_wrapper .link-widget li a:hover {
+    margin-left: .625rem;
+    color: var(--secondary-color);
+}
+
+.footer_wrapper .social-network a {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: .5rem;
+    line-height: 3.2rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    border: .125rem solid var(--text-gray);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer_wrapper .social-network a:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+    box-shadow: 0 .625rem .9375rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-0.1875rem);
+}
+
+.footer_wrapper .form-control {
+    font-size: 2rem;
+    color: white;
+}
+
+.footer_wrapper .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.footer_wrapper .copyright-section {
+    text-align: center;
+}
+
+.footer_wrapper .copyright-section p {
+    margin-top: 0;
+    padding: 3rem 0;
+    line-height: 0;
+}
+
+.footer_wrapper .copyright-section a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+
+.footer_wrapper .row{
+    margin-top: 100px;
+}

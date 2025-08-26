@@ -1,0 +1,240 @@
+:root {
+  /* Background Color */
+  --bg-white: #fff;
+  --glass-bg: rgba(255, 255, 255, 0.3); /* Semi-transparent background for glass effect */
+  --glass-blur: blur(10px); /* Blur effect for glass */
+  --glass-border: rgba(0, 0, 0, 0.2); /* Glass border color */
+  
+  /* Text Colors */
+  --primary-text: #061738;
+  --secondary-color: #60cd12;
+  --light-color: #e2f6de;
+  --dark-color: #03262c;
+  --text-white: #fff;
+  --text-gray: #dee2e6;
+  --anchor-color: #007aff;
+
+  /* Font Family */
+  --primary-font: 'Barlow Condensed', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+}
+
+/* General Styles */
+body {
+  font-family: var(--secondary-font);
+  color: var(--primary-text);
+  background-color: var(--light-color); /* Light background color for the whole page */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Featured Blog Post */
+.p-4.p-md-5.mb-4.rounded.bg-body-secondary {
+  background: var(--glass-bg); /* Glass-like background */
+  border: 2px solid var(--glass-border); /* Semi-transparent border */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: var(--glass-blur); /* Glass effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.p-4.p-md-5.mb-4.rounded.bg-body-secondary:hover {
+  background: rgba(255, 255, 255, 0.4); /* Slightly more opaque on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.display-4.fst-italic {
+  color: var(--dark-color); /* Dark color for heading */
+  font-size: 3rem; /* Increase font size */
+  font-family: var(--primary-font);
+  font-weight: bold; /* Make text more prominent */
+}
+
+.lead.my-3 {
+  color: var(--text-gray); /* Text color */
+  font-size: 1.25rem; /* Increase font size */
+  font-weight: bold; /* Make text more prominent */
+}
+
+.lead.mb-0 a {
+  color: var(--secondary-color); /* Secondary color for the link */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lead.mb-0 a:hover {
+  text-decoration: underline;
+}
+
+/* Blog Cards */
+.row.mb-2 .col-md-6.mb-4 {
+  margin-bottom: 20px;
+}
+
+.border.rounded {
+  background: var(--glass-bg); /* Glass-like background */
+  border: 2px solid var(--glass-border); /* Semi-transparent border */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: var(--glass-blur); /* Glass effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.border.rounded:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-primary {
+  color: var(--dark-color); /* Dark color for tags */
+  font-size: 1rem; /* Increase font size */
+  font-weight: bold; /* Make text more prominent */
+}
+
+.text-success {
+  color: var(--secondary-color); /* Secondary color for tags */
+  font-size: 1rem; /* Increase font size */
+  font-weight: bold; /* Make text more prominent */
+}
+
+.stretched-link {
+  color: var(--dark-color); /* Dark color for links */
+  font-size: 1rem; /* Increase font size */
+  text-decoration: none;
+}
+
+.stretched-link:hover {
+  text-decoration: underline;
+}
+
+/* Blog Post Details */
+.blog-post {
+  margin-bottom: 40px;
+  border-radius: 15px; /* Rounded corners */
+  background: var(--glass-bg); /* Glass-like background */
+  border: 2px solid var(--glass-border); /* Semi-transparent border */
+  backdrop-filter: var(--glass-blur); /* Glass effect */
+  padding: 20px; /* Padding for the blog post */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  color: var(--dark-color); /* Dark color for post titles */
+  font-size: 2rem; /* Increase font size */
+  margin-bottom: 15px;
+  font-family: var(--primary-font);
+  font-weight: bold; /* Make text more prominent */
+}
+
+.blog-post-meta a {
+  color: var(--secondary-color); /* Secondary color for author links */
+  font-weight: bold;
+}
+
+.blog-post-meta a:hover {
+  text-decoration: underline;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem; /* Increase font size */
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--text-gray);
+  padding: 12px; /* Increased padding */
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--dark-color); /* Dark color for table headers */
+  color: var(--text-white);
+  font-size: 1.125rem; /* Increase font size for headers */
+}
+
+.table tfoot {
+  font-weight: bold;
+}
+
+/* Sidebar */
+.position-sticky {
+  position: sticky;
+  top: 2rem;
+}
+
+.bg-body-tertiary {
+  background: var(--glass-bg); /* Glass-like background */
+  border: 1px solid var(--glass-border); /* Semi-transparent border */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: var(--glass-blur); /* Glass effect */
+  padding: 15px; /* Padding for sidebar sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fst-italic {
+  font-style: italic;
+  font-size: 1.125rem; /* Increase font size */
+  font-family: var(--primary-font);
+  font-weight: bold; /* Make text more prominent */
+}
+
+.link-body-emphasis {
+  color: var(--dark-color); /* Dark color for sidebar links */
+  font-size: 1.125rem; /* Increase font size */
+  text-decoration: none;
+}
+
+.link-body-emphasis:hover {
+  text-decoration: underline;
+}
+
+.border-top {
+  border-top: 1px solid var(--text-gray); /* Border for list items */
+}
+
+.d-flex .bd-placeholder-img {
+  margin-right: 15px;
+}
+
+.d-flex .d-flex {
+  align-items: center;
+}
+
+.d-flex span {
+  color: var(--dark-color); /* Dark color for sidebar post titles */
+  font-size: 1.125rem; /* Increase font size */
+}
+
+/* Pagination */
+.btn-outline-primary {
+  border-color: var(--dark-color); /* Dark color for pagination buttons */
+  color: var(--dark-color);
+  font-size: 1rem; /* Increase font size */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Increased padding */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--dark-color);
+  color: var(--text-white);
+}
+
+.btn-outline-secondary {
+  border-color: var(--text-gray);
+  color: var(--text-gray);
+  font-size: 1rem; /* Increase font size */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Increased padding */
+}
+
+.btn-outline-secondary.disabled {
+  background-color: var(--light-color);
+  color: var(--text-gray);
+}
